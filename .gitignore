@@ -27,3 +27,7 @@
 *.exe
 *.out
 *.app
+
+#Rproj
+*.Rproj
+*.Rproj.user/

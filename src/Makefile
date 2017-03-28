@@ -16,8 +16,8 @@ TEST_OBJS = tests.o
 
 #final SHLIB
 $(TARGET): $(TEST_OBJS)
-nvcc -shared $(NVCC_FLAGS) $(TEST_OBJS) -o $(TARGET) -I$(R_INC)\
--I. -L$(CUDA_PATH) $(LIBS) $(DL_FLAGS) $(DEBUG_FLAGS)
+	nvcc -shared $(NVCC_FLAGS) $(TEST_OBJS) -o $(TARGET) -I$(R_INC)\
+-L$(CUDA_PATH) $(LIBS) $(DL_FLAGS) $(DEBUG_FLAGS)
 
 test.o: test.cu
-nvcc $(NVCC_FLAGS) -I($R_INC) -c test.cu -o test.o $(LIBS)
+	nvcc $(NVCC_FLAGS) -I($R_INC) -c test.cu -o test.o $(LIBS)

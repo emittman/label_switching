@@ -1,10 +1,10 @@
-Package: anRpackage
+Package: labelswitching
 Type: Package
-Title: What the package does (short line)
+Title: Implements label-switching routine on device inspired by Papaspiliopoulos and Roberts
 Version: 1.0
 Date: 2017-03-28
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
-RoxygenNote: 5.0.1
+Author: Eric Mittman
+Maintainer: Eric Mittman <emittman@iastate.edu>
+Description: Updates labels conditional on a hyperparameter (alpha) and current label weights and occupancies
+License: GPLv2
+

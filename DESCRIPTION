@@ -7,3 +7,4 @@ Author: Eric Mittman
 Maintainer: Eric Mittman <emittman@iastate.edu>
 Description: Updates labels conditional on a hyperparameter (alpha) and current label weights and occupancies
 License: GPLv2
+

@@ -6,10 +6,6 @@
 #include<thrust/sort.h>
 #include<curand.h>
 
-typedef thrust::device_vector<double> fvec_d;
-typedef thrust::device_vector<int> ivec_d;
-typedef thrust::host_vector<int> ivec_d;
-
 __global__ void setup_kernel(int seed, int n_threads, curandState *states) {
   
   int id = threadIdx.x + blockIdx.x * blockDim.x;

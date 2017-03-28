@@ -10,7 +10,7 @@ CUDA_PATH = /usr/local/cuda-8.0/lib64
 
 LIBS = -lcublas_device -lcublas -lcurand -lcuda -lcudart
 
-TARGET = label_switch.so
+TARGET = labelswitching.so
 
 TEST_OBJS = test.o
 

@@ -3,6 +3,12 @@
 #include <R.h>
 #include <Rdefines.h>
 #include <Rinternals.h>
+#include<thrust/device_vector.h>
+#include<thrust/host_vector.h>
+#include<thrust/copy.h>
+#include<thrust/sequence.h>
+#include<thrust/sort.h>
+#include<curand.h>
 
 typedef thrust::device_vector<double> fvec_d;
 typedef thrust::device_vector<int> ivec_d;

@@ -1,10 +1,4 @@
 #include "fns.h"
-#include<thrust/device_vector.h>
-#include<thrust/host_vector.h>
-#include<thrust/copy.h>
-#include<thrust/sequence.h>
-#include<thrust/sort.h>
-#include<curand.h>
 
 __global__ void setup_kernel(int seed, int n_threads, curandState *states) {
   
@@ -38,7 +32,7 @@ extern "C" SEXP Rsample_wwr(SEXP Rseed, SEXP Rweights){
   ivec_d out_d(N);
   //instantiate RNGs
   curandState *devStates;
-  CUDA_CALL(cudaMalloc((void **) &devStates, N * sizeof(curandState)));
+  cudaMalloc((void **) &devStates, N * sizeof(curandState));
   unsigned blocksize = 512;
   unsigned nblocks = N/512 + 1;
   setup_kernel<<<nblocks, blocksize>>>(seed, N, devStates);

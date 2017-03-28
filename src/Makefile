@@ -20,4 +20,4 @@ $(TARGET): $(TEST_OBJS)
 -L$(CUDA_PATH) $(LIBS) $(DL_FLAGS) $(DEBUG_FLAGS)
 
 test.o: test.cu
-	nvcc $(NVCC_FLAGS) -I($R_INC) -c test.cu -o test.o $(LIBS)
+	nvcc $(NVCC_FLAGS) -I$(R_INC) -c test.cu -o test.o $(LIBS)

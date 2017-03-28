@@ -12,7 +12,7 @@ LIBS = -lcublas_device -lcublas -lcurand -lcuda -lcudart
 
 TARGET = label_switch.so
 
-TEST_OBJS = tests.o
+TEST_OBJS = test.o
 
 #final SHLIB
 $(TARGET): $(TEST_OBJS)
